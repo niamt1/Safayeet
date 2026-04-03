@@ -1,0 +1,435 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Chapter 1 Detailed Study Guide</title>
+<style>
+body {font-family: Arial, sans-serif; line-height:1.6; max-width: 1100px; margin: 0 auto; padding: 24px; background:#f7f9fc; color:#1f2937;}
+h1,h2,h3{color:#0f172a}
+header{background:#0b3a75; color:white; padding:18px 22px; border-radius:12px; margin-bottom:24px;}
+.section{background:white; border-radius:12px; padding:18px 20px; margin:16px 0; box-shadow:0 1px 3px rgba(0,0,0,.08)}
+ul{margin-top:8px}
+.badge{display:inline-block; font-size:12px; background:#e2e8f0; padding:2px 8px; border-radius:999px; margin-bottom:8px}
+.exam{border-left:4px solid #2563eb; padding-left:12px; background:#eff6ff; border-radius:8px; padding-top:8px; padding-bottom:8px}
+.small{font-size:14px;color:#475569}
+</style></head><body>
+<header><h1>Chapter 1 — Detailed HTML Study Guide</h1><p>This file preserves the key points in <code>chapter1.html</code> and adds in-depth explanations for every slide/topic so an undergraduate student can prepare for exams effectively.</p></header>
+<p class="small"><strong>How to use:</strong> For each section, first read the original slide points, then study the explanation, and finally practice with the exam focus note.</p>
+<section class="section" id="s1">
+<div class="badge">Slide 1</div><h2>Uses of Computer Networks</h2>
+<h3>Original points preserved</h3><ul>
+<li>Business Applications Home Applications Mobile Users Social Issues</li>
+</ul>
+<h3>In-depth explanation</h3><p>Computer networks enable resource sharing, communication, distributed computation, and global coordination. At a systems level, networking converts isolated machines into a cooperative platform where applications can be split across devices while still behaving like one logical system.</p>
+<div class="exam"><strong>Exam focus:</strong> For exams, be able to classify network uses into business, home, mobile, and societal impacts, and explain why packet switching and protocol standardization make these uses scalable.</div>
+</section>
+<section class="section" id="s2">
+<div class="badge">Slide 2</div><h2>Business Applications of Networks</h2>
+<h3>Original points preserved</h3><ul>
+<li>A network with two clients and one server.</li>
+</ul>
+<h3>In-depth explanation</h3><p>In enterprises, networks support shared databases, ERP systems, cloud services, and collaborative workflows. Client devices consume services exposed by servers (authentication, storage, analytics). This architecture centralizes policy enforcement, backups, auditing, and access control.</p>
+<div class="exam"><strong>Exam focus:</strong> Know why organizations prefer centralized servers: easier updates, stronger security controls, and better data consistency under concurrent access.</div>
+</section>
+<section class="section" id="s3">
+<div class="badge">Slide 3</div><h2>Business Applications of Networks (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>The client-server model involves requests and replies.</li>
+</ul>
+<h3>In-depth explanation</h3><p>The request-reply cycle is the core interaction pattern in distributed systems. A client sends a request message, the server validates identity/authorization, executes logic, and returns a response. Latency, throughput, and failure handling determine user-perceived performance.</p>
+<div class="exam"><strong>Exam focus:</strong> Practice drawing sequence diagrams for client-server exchange and identify where timeout, retransmission, and idempotency are needed.</div>
+</section>
+<section class="section" id="s4">
+<div class="badge">Slide 4</div><h2>Home Network Applications</h2>
+<h3>Original points preserved</h3><ul>
+<li>Access to remote information Person-to-person communication Interactive entertainment Electronic commerce</li>
+</ul>
+<h3>In-depth explanation</h3><p>Home networking covers information access (web, cloud storage), person-to-person communication (voice/video/chat), entertainment streaming, and e-commerce. The home router acts as gateway, firewall, DHCP server, and often Wi‑Fi access point.</p>
+<div class="exam"><strong>Exam focus:</strong> Be able to connect application examples to underlying protocols (e.g., HTTPS for commerce, RTP/QUIC for media, DNS for name resolution).</div>
+</section>
+<section class="section" id="s5">
+<div class="badge">Slide 5</div><h2>Home Network Applications (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>In peer-to-peer system there are no fixed clients and servers.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Peer-to-peer systems distribute responsibility among peers: each node can be both client and server. This improves scalability and resilience but complicates trust, NAT traversal, and content discovery.</p>
+<div class="exam"><strong>Exam focus:</strong> Understand tradeoffs: P2P reduces central bottlenecks but makes consistency, moderation, and security harder.</div>
+</section>
+<section class="section" id="s6">
+<div class="badge">Slide 6</div><h2>Home Network Applications (3)</h2>
+<h3>Original points preserved</h3><ul>
+<li>Some forms of e-commerce.</li>
+</ul>
+<h3>In-depth explanation</h3><p>E-commerce includes storefront browsing, payment authorization, inventory checks, shipping orchestration, and after-sales support. Security depends on TLS, certificate validation, secure session handling, anti-fraud analytics, and regulatory compliance.</p>
+<div class="exam"><strong>Exam focus:</strong> For exam answers, discuss confidentiality, integrity, authentication, and non-repudiation in online transactions.</div>
+</section>
+<section class="section" id="s7">
+<div class="badge">Slide 7</div><h2>Mobile Network Users</h2>
+<h3>Original points preserved</h3><ul>
+<li>Combinations of wireless networks and mobile computing.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Mobility introduces variable bandwidth, intermittent connectivity, handoff delays, and energy constraints. Wireless + mobility combinations range from stationary wireless users to fully mobile users with always-on cellular data.</p>
+<div class="exam"><strong>Exam focus:</strong> Differentiate mobility management (keeping identity/session while moving) from mere wireless access (radio medium).</div>
+</section>
+<section class="section" id="s8">
+<div class="badge">Slide 8</div><h2>Network Hardware</h2>
+<h3>Original points preserved</h3><ul>
+<li>Local Area Networks Metropolitan Area Networks Wide Area Networks Wireless Networks Home Networks Internetworks</li>
+</ul>
+<h3>In-depth explanation</h3><p>Hardware is categorized by scale and technology: LAN, MAN, WAN, wireless, home networks, and internetworks. Devices include hosts, switches, routers, access points, and middleboxes; links may be copper, fiber, or radio.</p>
+<div class="exam"><strong>Exam focus:</strong> Be able to justify device placement: switching inside LANs, routing between networks, and gateways for protocol boundaries.</div>
+</section>
+<section class="section" id="s9">
+<div class="badge">Slide 9</div><h2>Broadcast Networks</h2>
+<h3>Original points preserved</h3><ul>
+<li>Types of transmission technology</li>
+<li>Broadcast links Point-to-point links</li>
+</ul>
+<h3>In-depth explanation</h3><p>Broadcast links share one transmission medium among many nodes; addressing in frame headers decides who should process each frame. Point-to-point links dedicate connectivity between pairs of nodes and are composed into larger topologies.</p>
+<div class="exam"><strong>Exam focus:</strong> Know where broadcast is efficient (small LAN discovery) and where it is problematic (scalability, collisions, security exposure).</div>
+</section>
+<section class="section" id="s10">
+<div class="badge">Slide 10</div><h2>Broadcast Networks (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>Classification of interconnected processors by scale.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Processor/network classification by scale helps choose technology and protocol assumptions: short distances allow lower latency and high bandwidth sharing; larger scales require routing, hierarchy, and fault isolation.</p>
+<div class="exam"><strong>Exam focus:</strong> Map each scale to typical examples: LAN in buildings, MAN across city, WAN across regions/countries.</div>
+</section>
+<section class="section" id="s11">
+<div class="badge">Slide 11</div><h2>Local Area Networks</h2>
+<h3>Original points preserved</h3><ul>
+<li>Two broadcast networks</li>
+<li>Bus Ring</li>
+</ul>
+<h3>In-depth explanation</h3><p>Classic LAN topologies include bus and ring, while modern LANs are mostly switched star Ethernet. LANs emphasize high speed, low error rate, and organizational control over infrastructure.</p>
+<div class="exam"><strong>Exam focus:</strong> Explain why switched Ethernet replaced shared bus: fewer collisions, full-duplex links, and easier scaling.</div>
+</section>
+<section class="section" id="s12">
+<div class="badge">Slide 12</div><h2>Metropolitan Area Networks</h2>
+<h3>Original points preserved</h3><ul>
+<li>A metropolitan area network based on cable TV.</li>
+</ul>
+<h3>In-depth explanation</h3><p>MANs interconnect multiple LANs across a city, often using provider infrastructure like cable/fiber rings. They balance regional coverage and higher bandwidth than long-haul WANs.</p>
+<div class="exam"><strong>Exam focus:</strong> Expect questions comparing MAN vs WAN in ownership, latency, and technology choices.</div>
+</section>
+<section class="section" id="s13">
+<div class="badge">Slide 13</div><h2>Wide Area Networks</h2>
+<h3>Original points preserved</h3><ul>
+<li>Relation between hosts on LANs and the subnet.</li>
+</ul>
+<h3>In-depth explanation</h3><p>WANs connect distant sites through carrier networks. Hosts attach to edge routers; routers form a subnet that forwards packets hop-by-hop using routing tables and control protocols.</p>
+<div class="exam"><strong>Exam focus:</strong> In answers, distinguish hosts (end systems) from the communication subnet (routers + links).</div>
+</section>
+<section class="section" id="s14">
+<div class="badge">Slide 14</div><h2>Wide Area Networks (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>A stream of packets from sender to receiver.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Packets from one flow can take dynamic paths depending on congestion or failures. Store-and-forward forwarding introduces queueing and serialization delays at each hop.</p>
+<div class="exam"><strong>Exam focus:</strong> Be prepared to compute end-to-end delay components: processing + queueing + transmission + propagation.</div>
+</section>
+<section class="section" id="s15">
+<div class="badge">Slide 15</div><h2>Wireless Networks</h2>
+<h3>Original points preserved</h3><ul>
+<li>Categories of wireless networks:</li>
+<li>System interconnection Wireless LANs Wireless WANs</li>
+</ul>
+<h3>In-depth explanation</h3><p>Wireless systems can be grouped as short-range interconnection (e.g., Bluetooth), WLAN (Wi‑Fi), and WWAN (cellular). Shared spectrum and interference make MAC design critical.</p>
+<div class="exam"><strong>Exam focus:</strong> Know core challenges: fading, hidden terminals, contention, and mobility support.</div>
+</section>
+<section class="section" id="s16">
+<div class="badge">Slide 16</div><h2>Wireless Networks (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>Bluetooth configuration Wireless LAN</li>
+</ul>
+<h3>In-depth explanation</h3><p>Bluetooth uses piconets/scatternets for personal-area connectivity, while WLANs provide higher throughput and IP connectivity in local coverage zones.</p>
+<div class="exam"><strong>Exam focus:</strong> Compare Bluetooth and Wi‑Fi by range, data rate, power profile, and common use cases.</div>
+</section>
+<section class="section" id="s17">
+<div class="badge">Slide 17</div><h2>Wireless Networks (3)</h2>
+<h3>Original points preserved</h3><ul>
+<li>Individual mobile computers A flying LAN</li>
+</ul>
+<h3>In-depth explanation</h3><p>Ad hoc or rapidly deployed networks (e.g., temporary/flying LAN) rely on dynamic topology formation. Routing must adapt quickly with minimal control overhead.</p>
+<div class="exam"><strong>Exam focus:</strong> Understand when infrastructure mode is preferable vs ad hoc mode.</div>
+</section>
+<section class="section" id="s18">
+<div class="badge">Slide 18</div><h2>Home Network Categories</h2>
+<h3>Original points preserved</h3><ul>
+<li>Computers (desktop PC, PDA, shared peripherals Entertainment (TV, DVD, VCR, camera, stereo, MP3) Telecomm (telephone, cell phone, intercom, fax) Appliances (microwave, fridge, clock, furnace, airco) Telemetry (utility meter, burglar alarm, babycam).</li>
+</ul>
+<h3>In-depth explanation</h3><p>A modern home network integrates compute, entertainment, telecommunication, appliances, and telemetry (IoT). Interoperability and security become central as device diversity increases.</p>
+<div class="exam"><strong>Exam focus:</strong> Common exam angle: propose segmentation strategy (guest VLAN, IoT subnet) and justify it.</div>
+</section>
+<section class="section" id="s19">
+<div class="badge">Slide 19</div><h2>Network Software</h2>
+<h3>Original points preserved</h3><ul>
+<li>Protocol Hierarchies Design Issues for the Layers Connection-Oriented and Connectionless Services Service Primitives The Relationship of Services to Protocols</li>
+<li>Network Software</li>
+<li>Protocol Hierarchies</li>
+<li>Layers, protocols, and interfaces.</li>
+<li>Protocol Hierarchies (2)</li>
+<li>The philosopher-translator-secretary architecture.</li>
+<li>Protocol Hierarchies (3)</li>
+<li>Example information flow supporting virtual communication in layer 5.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Network software is organized into protocol layers. Each layer provides services to the layer above and uses services of the layer below, hiding implementation details and reducing design complexity.</p>
+<div class="exam"><strong>Exam focus:</strong> Memorize layer responsibilities and why layering supports modularity, interoperability, and independent evolution.</div>
+</section>
+<section class="section" id="s20">
+<div class="badge">Slide 20</div><h2>Design Issues for the Layers</h2>
+<h3>Original points preserved</h3><ul>
+<li>Addressing Error Control Flow Control Multiplexing Routing</li>
+<li>Connection-Oriented and Connectionless Services</li>
+<li>Six different types of service.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Key layer concerns include addressing (who), error control (correctness), flow control (rate matching), multiplexing (sharing channels), and routing (path selection). These appear repeatedly across layers with different mechanisms.</p>
+<div class="exam"><strong>Exam focus:</strong> A strong answer connects each issue to a concrete protocol example (e.g., TCP flow control, IP routing, MAC addressing).</div>
+</section>
+<section class="section" id="s21">
+<div class="badge">Slide 21</div><h2>Service Primitives</h2>
+<h3>Original points preserved</h3><ul>
+<li>Five service primitives for implementing a simple connection-</li>
+<li>oriented service.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Service primitives are abstract operations offered by a layer, such as LISTEN, CONNECT, SEND, RECEIVE, and DISCONNECT. They define API-level behavior independent of wire-level protocol details.</p>
+<div class="exam"><strong>Exam focus:</strong> Differentiate service specification (what operations do) from protocol implementation (how messages realize them).</div>
+</section>
+<section class="section" id="s22">
+<div class="badge">Slide 22</div><h2>Service Primitives (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>Packets sent in a simple client-server interaction on a connection-oriented network.</li>
+</ul>
+<h3>In-depth explanation</h3><p>In connection-oriented exchange, setup precedes data transfer and teardown follows completion. Control packets establish state; data packets use this state for reliable ordered delivery.</p>
+<div class="exam"><strong>Exam focus:</strong> Sequence reasoning is frequently tested—practice identifying which packet corresponds to which primitive.</div>
+</section>
+<section class="section" id="s23">
+<div class="badge">Slide 23</div><h2>Services to Protocols Relationship</h2>
+<h3>Original points preserved</h3><ul>
+<li>The relationship between a service and a protocol.</li>
+</ul>
+<h3>In-depth explanation</h3><p>A service is the contract between adjacent layers; a protocol is the rule set among peer entities at the same layer. Good architecture separates these to enable replacing protocols without breaking upper layers.</p>
+<div class="exam"><strong>Exam focus:</strong> Expect conceptual questions asking why service/protocol/interface separation improves maintainability.</div>
+</section>
+<section class="section" id="s24">
+<div class="badge">Slide 24</div><h2>Reference Models</h2>
+<h3>Original points preserved</h3><ul>
+<li>The OSI Reference Model The TCP/IP Reference Model A Comparison of OSI and TCP/IP A Critique of the OSI Model and Protocols A Critique of the TCP/IP Reference Model</li>
+</ul>
+<h3>In-depth explanation</h3><p>Reference models (OSI, TCP/IP, hybrid) provide conceptual decomposition of network functionality. They are educational and engineering tools, not always exact depictions of deployed stacks.</p>
+<div class="exam"><strong>Exam focus:</strong> Be ready to compare models by layer boundaries, historical adoption, and practical relevance.</div>
+</section>
+<section class="section" id="s25">
+<div class="badge">Slide 25</div><h2>Reference Models</h2>
+<h3>Original points preserved</h3><ul>
+<li>The OSI reference model.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Reference models (OSI, TCP/IP, hybrid) provide conceptual decomposition of network functionality. They are educational and engineering tools, not always exact depictions of deployed stacks.</p>
+<div class="exam"><strong>Exam focus:</strong> Be ready to compare models by layer boundaries, historical adoption, and practical relevance.</div>
+</section>
+<section class="section" id="s26">
+<div class="badge">Slide 26</div><h2>Reference Models (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>The TCP/IP reference model.</li>
+</ul>
+<h3>In-depth explanation</h3><p>OSI has 7 layers: physical, data link, network, transport, session, presentation, application. It emphasizes clean boundaries, formal services, and strong abstraction.</p>
+<div class="exam"><strong>Exam focus:</strong> Exams often ask functions per layer—prepare concise one-line responsibilities.</div>
+</section>
+<section class="section" id="s27">
+<div class="badge">Slide 27</div><h2>Reference Models (3)</h2>
+<h3>Original points preserved</h3><ul>
+<li>Protocols and networks in the TCP/IP model initially.</li>
+</ul>
+<h3>In-depth explanation</h3><p>TCP/IP historically had link, internet, transport, and application layers with protocols like Ethernet, IP, TCP/UDP, and HTTP/SMTP/DNS. Its strength came from deployability and early adoption.</p>
+<div class="exam"><strong>Exam focus:</strong> Know the protocol mapping and why TCP/IP succeeded operationally despite less formal structure.</div>
+</section>
+<section class="section" id="s28">
+<div class="badge">Slide 28</div><h2>Comparing OSI and TCP/IP Models</h2>
+<h3>Original points preserved</h3><ul>
+<li>Concepts central to the OSI model</li>
+<li>Services Interfaces Protocols</li>
+<li>A Critique of the OSI Model and Protocols</li>
+<li>Why OSI did not take over the world</li>
+<li>Bad timing Bad technology Bad implementations Bad politics</li>
+</ul>
+<h3>In-depth explanation</h3><p>OSI separates concepts rigorously; TCP/IP is pragmatic and protocol-first. The comparison highlights theory-versus-deployment tensions and motivates modern hybrid teaching models.</p>
+<div class="exam"><strong>Exam focus:</strong> Give balanced critiques: OSI clarity vs TCP/IP practicality.</div>
+</section>
+<section class="section" id="s29">
+<div class="badge">Slide 29</div><h2>Bad Timing</h2>
+<h3>Original points preserved</h3><ul>
+<li>The apocalypse of the two elephants.</li>
+<li>A Critique of the TCP/IP Reference Model</li>
+<li>Problems:</li>
+<li>Service, interface, and protocol not distinguished Not a general model Host-to-network “layer” not really a layer No mention of physical and data link layers Minor protocols deeply entrenched, hard to replace</li>
+</ul>
+<h3>In-depth explanation</h3><p>OSI standardization matured after TCP/IP had already gained momentum through ARPANET and academic adoption. Network effects, installed base, and operational tooling made displacement unlikely.</p>
+<div class="exam"><strong>Exam focus:</strong> Use timeline arguments in exam essays: technical merit alone does not determine adoption.</div>
+</section>
+<section class="section" id="s30">
+<div class="badge">Slide 30</div><h2>Hybrid Model</h2>
+<h3>Original points preserved</h3><ul>
+<li>The hybrid reference model to be used in this book.</li>
+</ul>
+<h3>In-depth explanation</h3><p>The hybrid model typically teaches five layers: physical, data link, network, transport, application—combining OSI clarity with TCP/IP realism.</p>
+<div class="exam"><strong>Exam focus:</strong> Be able to map both OSI and TCP/IP components into this 5-layer model.</div>
+</section>
+<section class="section" id="s31">
+<div class="badge">Slide 31</div><h2>Example Networks</h2>
+<h3>Original points preserved</h3><ul>
+<li>The Internet</li>
+<li>Connection-Oriented Networks: X.25, Frame Relay, and ATM</li>
+<li>Ethernet</li>
+<li>Wireless LANs: 802:11</li>
+</ul>
+<h3>In-depth explanation</h3><p>Case studies (Internet, X.25/Frame Relay/ATM, Ethernet, 802.11) illustrate differing design goals: reliability, latency, QoS, scalability, and cost.</p>
+<div class="exam"><strong>Exam focus:</strong> When comparing technologies, tie architecture choices to service guarantees and traffic patterns.</div>
+</section>
+<section class="section" id="s32">
+<div class="badge">Slide 32</div><h2>The ARPANET</h2>
+<h3>Original points preserved</h3><ul>
+<li>Structure of the telephone system. Baran’s proposed distributed switching system.</li>
+</ul>
+<h3>In-depth explanation</h3><p>ARPANET pioneered packet switching to improve robustness and resource sharing versus circuit-switched telephony. Distributed designs were more resilient to link/node failures.</p>
+<div class="exam"><strong>Exam focus:</strong> Know the historical motivation: survivability, efficient sharing of expensive computing resources.</div>
+</section>
+<section class="section" id="s33">
+<div class="badge">Slide 33</div><h2>The ARPANET (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>The original ARPANET design.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Early ARPANET used Interface Message Processors (IMPs) to connect host computers and perform packet forwarding. This separation simplified host implementation.</p>
+<div class="exam"><strong>Exam focus:</strong> A frequent question is why packet switches were introduced as dedicated nodes.</div>
+</section>
+<section class="section" id="s34">
+<div class="badge">Slide 34</div><h2>The ARPANET (3)</h2>
+<h3>Original points preserved</h3><ul>
+<li>Growth of the ARPANET (a) December 1969. ( b) July 1970.</li>
+<li>March 1971. (d) April 1972. (e) September 1972.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Rapid node growth from 1969 onward demonstrated scalability of packet networks and catalyzed protocol innovation (NCP, later TCP/IP).</p>
+<div class="exam"><strong>Exam focus:</strong> Be prepared to cite the growth trend as evidence for packet-switching viability.</div>
+</section>
+<section class="section" id="s35">
+<div class="badge">Slide 35</div><h2>NSFNET</h2>
+<h3>Original points preserved</h3><ul>
+<li>The NSFNET backbone in 1988.</li>
+</ul>
+<h3>In-depth explanation</h3><p>NSFNET expanded academic networking and eventually became a major Internet backbone transition step. It accelerated interconnection of universities and research centers.</p>
+<div class="exam"><strong>Exam focus:</strong> Understand NSFNET’s role in moving from research network to broader public/commercial Internet.</div>
+</section>
+<section class="section" id="s36">
+<div class="badge">Slide 36</div><h2>Internet Usage</h2>
+<h3>Original points preserved</h3><ul>
+<li>Traditional applications (1970 – 1990)</li>
+<li>E-mail News Remote login File transfer</li>
+</ul>
+<h3>In-depth explanation</h3><p>Early Internet applications included email, Usenet/news, remote login, and file transfer—services optimized for text and delayed interaction. Later usage shifted toward web and multimedia.</p>
+<div class="exam"><strong>Exam focus:</strong> Exam tip: explain how application demands drove transport and congestion-control evolution.</div>
+</section>
+<section class="section" id="s37">
+<div class="badge">Slide 37</div><h2>Architecture of the Internet</h2>
+<h3>Original points preserved</h3><ul>
+<li>Overview of the Internet.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Internet architecture is hierarchical: edge networks connect via ISPs and backbone providers; routing is decentralized using interdomain and intradomain protocols. End-to-end principle places intelligence largely at endpoints.</p>
+<div class="exam"><strong>Exam focus:</strong> Know the role of IXPs, ASes, and routing policies in global connectivity.</div>
+</section>
+<section class="section" id="s38">
+<div class="badge">Slide 38</div><h2>ATM Virtual Circuits</h2>
+<h3>Original points preserved</h3><ul>
+<li>A virtual circuit.</li>
+</ul>
+<h3>In-depth explanation</h3><p>ATM uses virtual circuits with pre-established paths and per-hop labels, enabling predictable QoS and traffic engineering. State in switches supports connection semantics.</p>
+<div class="exam"><strong>Exam focus:</strong> Contrast virtual-circuit vs datagram networks on setup overhead, per-flow state, and failure recovery.</div>
+</section>
+<section class="section" id="s39">
+<div class="badge">Slide 39</div><h2>ATM Virtual Circuits (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>An ATM cell.</li>
+</ul>
+<h3>In-depth explanation</h3><p>ATM cells are fixed-length (53 bytes: 5-byte header + 48-byte payload), which simplifies switching hardware and delay predictability but adds overhead for small payloads.</p>
+<div class="exam"><strong>Exam focus:</strong> Be able to compute header overhead and discuss tradeoffs of fixed-size cells.</div>
+</section>
+<section class="section" id="s40">
+<div class="badge">Slide 40</div><h2>The ATM Reference Model</h2>
+<h3>Original points preserved</h3><ul>
+<li>The ATM reference model.</li>
+</ul>
+<h3>In-depth explanation</h3><p>ATM defines adaptation, ATM, and physical layers. Adaptation handles service-specific mapping; ATM layer handles cell switching; physical layer transmits bits.</p>
+<div class="exam"><strong>Exam focus:</strong> Prepare to explain why adaptation sublayers are needed for different traffic types.</div>
+</section>
+<section class="section" id="s41">
+<div class="badge">Slide 41</div><h2>The ATM Reference Model (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>The ATM layers and sublayers and their functions.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Sublayers and convergence functions in ATM bridge higher-level service requirements (voice/video/data) with uniform cell transport.</p>
+<div class="exam"><strong>Exam focus:</strong> Exam questions often ask mapping from application traffic type to AAL behavior.</div>
+</section>
+<section class="section" id="s42">
+<div class="badge">Slide 42</div><h2>Ethernet</h2>
+<h3>Original points preserved</h3><ul>
+<li>Architecture of the original Ethernet.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Original Ethernet began as shared-medium CSMA/CD and evolved into switched full-duplex Ethernet dominating LANs. It succeeded through simplicity, low cost, and backward compatibility.</p>
+<div class="exam"><strong>Exam focus:</strong> Know frame basics (MAC addresses, EtherType/length, payload, FCS) and evolution milestones.</div>
+</section>
+<section class="section" id="s43">
+<div class="badge">Slide 43</div><h2>Wireless LANs</h2>
+<h3>Original points preserved</h3><ul>
+<li>Wireless networking with a base station. Ad hoc networking.</li>
+</ul>
+<h3>In-depth explanation</h3><p>802.11 supports infrastructure mode (AP-centered) and ad hoc mode. Medium access uses CSMA/CA because collision detection is hard in radio environments.</p>
+<div class="exam"><strong>Exam focus:</strong> Understand why RTS/CTS may mitigate hidden-terminal problems.</div>
+</section>
+<section class="section" id="s44">
+<div class="badge">Slide 44</div><h2>Wireless LANs (2)</h2>
+<h3>Original points preserved</h3><ul>
+<li>The range of a single radio may not cover the entire system.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Single-cell coverage is limited by power, obstacles, and interference. Capacity and reliability improve with planned AP placement, channel reuse, and roaming support.</p>
+<div class="exam"><strong>Exam focus:</strong> Be ready to discuss link budget basics and practical deployment constraints.</div>
+</section>
+<section class="section" id="s45">
+<div class="badge">Slide 45</div><h2>Wireless LANs (3)</h2>
+<h3>Original points preserved</h3><ul>
+<li>A multicell 802.11 network.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Multicell WLANs form an Extended Service Set, enabling mobility with handoff between APs. Coordination preserves sessions while clients move.</p>
+<div class="exam"><strong>Exam focus:</strong> Typical exam prompt: explain roaming and why channel planning matters.</div>
+</section>
+<section class="section" id="s46">
+<div class="badge">Slide 46</div><h2>Network Standardization</h2>
+<h3>Original points preserved</h3><ul>
+<li>Who’s Who in the Telecommunications World Who’s Who in the International Standards World Who’s Who in the Internet Standards World</li>
+</ul>
+<h3>In-depth explanation</h3><p>Standards bodies coordinate interoperability across vendors and countries. Telecom, Internet, and industry consortia each have different governance models and document processes.</p>
+<div class="exam"><strong>Exam focus:</strong> Know examples: ITU/ISO/IEC for formal standards, IETF for Internet RFCs, IEEE for LAN/MAN standards.</div>
+</section>
+<section class="section" id="s47">
+<div class="badge">Slide 47</div><h2>ITU</h2>
+<h3>Original points preserved</h3><ul>
+<li>Main sectors</li>
+<li>Radiocommunications Telecommunications Standardization Development</li>
+<li>Classes of Members</li>
+<li>National governments Sector members Associate members Regulatory agencies</li>
+</ul>
+<h3>In-depth explanation</h3><p>The ITU is a UN specialized agency with sectors for radiocommunication (ITU‑R), standardization (ITU‑T), and development (ITU‑D). Membership spans governments, regulators, and sector participants.</p>
+<div class="exam"><strong>Exam focus:</strong> Expect factual questions on sector functions and role in spectrum and telecom recommendations.</div>
+</section>
+<section class="section" id="s48">
+<div class="badge">Slide 48</div><h2>IEEE 802 Standards</h2>
+<h3>Original points preserved</h3><ul>
+<li>The 802 working groups. The important ones are marked with *. The ones marked with 🡫 are</li>
+<li>hibernating. The one marked with † gave up.</li>
+</ul>
+<h3>In-depth explanation</h3><p>IEEE 802 working groups define key LAN/MAN technologies, including Ethernet (802.3) and Wi‑Fi (802.11). Working groups evolve, merge, hibernate, or conclude as technology matures.</p>
+<div class="exam"><strong>Exam focus:</strong> Memorize the major active groups and what layers/components they standardize.</div>
+</section>
+<section class="section" id="s49">
+<div class="badge">Slide 49</div><h2>Metric Units</h2>
+<h3>Original points preserved</h3><ul>
+<li>The principal metric prefixes.</li>
+</ul>
+<h3>In-depth explanation</h3><p>Networking performance uses SI prefixes (kilo, mega, giga, tera, etc.) for rates, frequencies, and capacities. Distinguish decimal SI (10^3) from binary prefixes (Ki, Mi, Gi = 2^10, 2^20, 2^30).</p>
+<div class="exam"><strong>Exam focus:</strong> Common pitfalls: Mbps vs MB/s and decimal-vs-binary storage units.</div>
+</section>
+</body></html>
